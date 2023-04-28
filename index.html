@@ -15,7 +15,7 @@
     <script src=https://bwton-cdn.oss-cn-shanghai.aliyuncs.com/act-img/3601ncp/rem.js></script>
     <script src="https://g.alicdn.com/dingding/dingtalk-jsapi/3.0.12/dingtalk.open.js"></script>
     <script>
-        
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
@@ -26,7 +26,6 @@
             });
         }
         window.addEventListener('beforeinstallprompt', (event) => {
-            alert(1)
             // 阻止默认的安装提示
             event.preventDefault();
             // 保存事件对象，稍后会用到
