@@ -1,7 +1,7 @@
 {
   "name": "渝畅行",
   "short_name": "渝畅行",
-  "start_url": "/appointment/#/appointmentMain",
+  "start_url": "/test/#/appointmentMain",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
