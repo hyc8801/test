@@ -26,31 +26,9 @@
             });
         }
         window.addEventListener('beforeinstallprompt', (event) => {
-            // 阻止默认的安装提示
-            event.preventDefault();
-            // 保存事件对象，稍后会用到
-            deferredPrompt = event;
-            // 在页面中显示自定义的安装提示
-            showInstallPrompt();
+            console.log(`下载前提示😁`);
         });
 
-        const showInstallPrompt = () => {
-            const installButton = document.createElement('button');
-            installButton.innerText = 'Install App';
-            installButton.addEventListener('click', () => {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('User accepted the install prompt');
-                } else {
-                    console.log('User dismissed the install prompt');
-                }
-                deferredPrompt = null;
-                });
-            });
-            // 将按钮添加到页面中
-            document.body.appendChild(installButton);
-            }
     </script>
     <script>
         ;(function () {
